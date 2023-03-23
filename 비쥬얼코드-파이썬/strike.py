@@ -57,9 +57,3 @@ while(i) : #무한반복
          strike = 0
          ball = 0
          out = 0
-'''
-for i in range(True):
-    for k in range(5):
-        print("?")
-    break
-'''
