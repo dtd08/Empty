@@ -18,7 +18,9 @@ public class _02_String2 {
 		// 공백제거 
 		s = "      love java 	 ";
 		System.out.println(s + ".");
+		//       love java 	 .
 		System.out.println(s.trim() + "."); // 앞뒤 공백 제거. 단어 사이 공백은 제거하지 않음
+		// love java.
 		
 		// 문자열 결합 - + 기호 사용, concat()
 		String s1 = "Java";
