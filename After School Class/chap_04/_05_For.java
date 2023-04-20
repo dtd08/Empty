@@ -4,7 +4,7 @@ public class _05_For {
 	public static void main(String[] args) {
 		/* 반복문 
 		 for(초기화; 조건식; 증감값) {
-		 	// 반복될 코드
+		 	// 조건이 참일때 반복될 코드
 		 }
 		 주로 반복할 횟수가 명확할 때 사용
 		 특히 배열에서 자주 사용
