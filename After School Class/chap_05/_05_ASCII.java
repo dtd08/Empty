@@ -21,6 +21,7 @@ public class _05_ASCII { // American Standard Cord for Information Interchange
 		System.out.println(c);
 		System.out.println((int)c);
 		
+		
 		System.out.println("===========================================================");
 		
 		
@@ -34,7 +35,7 @@ public class _05_ASCII { // American Standard Cord for Information Interchange
 		
 		for(int i = 0; i < seats.length; i++, seatheng++) {
 			for(int j = 0; j < seats[i].length; j++) {
-				System.out.print(seats[i][j] = (j < 9) ? (seatheng + "0" + (j+1) + " ") : (String.valueOf(seatheng) + (j+1) + " "));
+				System.out.print((seats[i][j] = (j < 9) ? (seatheng + "0" + (j+1)) : (String.valueOf(seatheng) + (j+1))) + " ");
 			}
 			System.out.println();
 		}
