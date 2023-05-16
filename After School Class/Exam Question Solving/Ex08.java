@@ -24,7 +24,8 @@ public class Ex08 {
 				}
 				System.out.println("짝");
 				cnt++;
-			} else {
+			} 
+			else {
 				if(r == 3 || r == 6 || r== 9) {
 					System.out.println("짝");
 					cnt++;
