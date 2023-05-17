@@ -1,37 +1,24 @@
-package exam;
+package test;
 
 import java.util.Scanner;
 
 public class Ex04 {
 	public static void main(String[] args) {
-		
-		// 체중과 키를 활용하여 아래 표와 같이 비만도(bmi)를 계산할 수 있다.
-		// 체중이 70이고 키가 1.7일 대 비만도의 측정 결과는?
-		
+		// 어떤 정수 n을 입력 받고,
+		// 1부터 홀수를 차례대로 더해 나가면서 합이 n보다 크면 그 때까지 더한 홀수의 개수와 그 합을 구하시오
 		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("키를 입력하세요");
-		double height = sc.nextDouble();
-		height /= 100;
-		
-		System.out.println("몸무게를 입력하세요");
-		double weight = sc.nextDouble();
-		
-		double bmi = weight / (height * height);
-		
-		System.out.println("키 : " +height + ", 몸무게 : " + weight);
-		System.out.printf("당신의 비만도 수치 %.2f 인 당신은 ", bmi);
-		
-		if(bmi < 18.5) {
-			System.out.println("저체중");
-		} else if (bmi < 24.9) {
-			System.out.println("건강");
-		} else if (bmi < 29.9) {
-			System.out.println("과체중");
-		} else if (bmi > 30) {
-			System.out.println("비만");
-		} else {
-			System.out.println("오류");
+		System.out.print("숫자를 하나 입력하세요. ");
+		int n = sc.nextInt();
+		int sum = 0;
+		int cnt = 0;
+		for(int i = 1;; i+=2) {
+			if(sum > n) {
+				break;
+			}
+			cnt++;
+			sum += i;
 		}
+		System.out.println(cnt + ", " + sum);
+		
 	}
 }
