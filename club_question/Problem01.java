@@ -3,7 +3,7 @@ package club_question;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class test_01 { 
+public class Problem01 { 
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
