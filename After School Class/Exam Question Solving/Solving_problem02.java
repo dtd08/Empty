@@ -2,7 +2,7 @@ package exam;
 
 import java.util.Scanner;
 
-public class Wrong_problem02 {
+public class Solving_problem02 {
 	public static void main(String[] args) {
 		// 틀린문제
 		// 1부터 시작하여, 3과 6과 9에서 박수를 치는 3, 6, 9 게임을 하려고 한다.
