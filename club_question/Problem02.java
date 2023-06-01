@@ -2,7 +2,7 @@ package chap;
 
 import java.util.Scanner;
 
-public class test_02 {
+public class Problem02 {
 
 	public static void main(String[] args) {
 		// char형 2차원 배열 engNums 생성
