@@ -1,4 +1,4 @@
-package club_question;
+package clubQuestion;
 
 import java.util.Arrays;
 import java.util.Scanner;
