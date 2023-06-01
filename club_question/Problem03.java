@@ -1,4 +1,4 @@
-package baekjoon;
+package clubQuestion;
 
 import java.util.Scanner;
 
