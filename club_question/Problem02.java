@@ -1,4 +1,4 @@
-package chap;
+package clubQuestion;
 
 import java.util.Scanner;
 
