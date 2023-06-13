@@ -27,5 +27,6 @@ public class _05_Overloading {
 	public static void main(String[] args) {
 		getPower(5);
 		getPower("5");
+		getPower(5, 3);
 	}
 }
