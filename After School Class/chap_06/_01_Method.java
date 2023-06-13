@@ -23,7 +23,8 @@ public class _01_Method {
 	
 	// 메소드 정의
 	public static void hello() { 
-		// public은 '공용의'뜻의 접근제어자로, 어디에서나 접근할 수 있음을 나타냄
+		// public은 '공용의'라는 뜻의 접근제어자로, 어디에서나 접근할 수 있음을 나타냄
+		/// 또 다른 접근제어자로 같은 클래스 내에서만 쓸 수 있음을 나타내는 private가 있다.
 		// static은 main이 static이어서 main 밖에 함수를 쓸려면 메소드가 같은 static이어야 하기 때문에 쓰임
 		// void는 리턴 타입 중 하나로, 함수가 끝난 후 값을 전달하는게 없음을 뜻함
 		System.out.println("Hello World!");
