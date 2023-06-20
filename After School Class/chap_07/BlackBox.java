@@ -36,5 +36,12 @@ public class BlackBox { // 클래스 실습용 클래스
 		System.out.printf("용량은 %d GB 입니다.\n", capacity);
 	}
 	
-	
+	int getVideoFileCount (int type) {
+		if(type == 1) { // 일반영상
+			return 9;
+		} else if (type == 2) { // 이벤트(충돌) 영상
+			return 2;
+		} 
+		return 10;
+	}
 }
