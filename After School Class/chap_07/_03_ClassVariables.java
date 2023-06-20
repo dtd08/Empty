@@ -24,5 +24,10 @@ public class _03_ClassVariables {
 		System.out.println(b1.modelName + " 자동 신고 기능 : " + b1.canAutoReport);
 		System.out.println(b2.modelName + " 자동 신고 기능 : " + b1.canAutoReport);
 
+		// 여담으로 String도 클래스인데 별도의 선언 과정 없이 쓸 수 있는 이유는
+		// String을 워낙 자주 써서 자바가 그냥 기본적으로 제공해주기 때문이다.
+		String str = "자바";
+		String str2 = new String();
+		str2 = "파이썬";
 	}
 }
