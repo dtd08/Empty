@@ -23,7 +23,7 @@ public class BlackBox { // 클래스 실습용 클래스
 	static boolean canAutoReport = false;
 	
 	// 자동 충돌 감지 기능 여부 안내
-	void AutoReport() {
+	void autoReport() {
 		if(canAutoReport)
 			System.out.println("충돌 감지 기능이 활성화 되었습니다.");
 		else
