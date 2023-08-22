@@ -1,0 +1,110 @@
+<!-- 8/22 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>type 속성</title>
+</head>
+<body>
+    <!-- text는 input의 가장 기본 태그 -->
+    <p>text: <input type="text" name="testText" id=""></p>
+    
+    <!-- 내용이 안보임 -->
+    <p>password: <input type="password" name="password" id=""></p>
+
+    <!-- 겉보기엔 차이가 없지만 나중에 유효성 검사에 유용하게 쓰인다 -->
+    <p>tel: <input type="tel" name="" id=""></p>
+
+    <!-- e를 제외한(지수 기호) 모든 문자들이 안되고, 숫자만 입력 가능 -->
+    <p>number: <input type="number" name="" id=""></p>
+
+    <!-- url -->
+    <p>url: <input type="url" name="" id=""></p>
+
+    <!-- 입력하면 칸의 오른쪽 끝에 내용을 지울 수 있는 x표시가 뜸 -->
+    <p>search: <input type="search" name="" id=""></p>
+
+    <!-- email -->
+    <p>email: <input type="email" name="" id=""></p>
+
+    <!-- 체크박스 / 잘쓰임 -->
+    <p>checkbox: <input type="checkbox" name="" id=""></p>
+
+    <!-- 체크박스와 함께 자주 쓰임 -->
+    <p>radio: <input type="radio" name="" id=""></p>
+
+    <!-- 파일 들어가는 것 / 도제 외부시험 혹은 산업기사에서 나옴-->
+    <p>file: <input type="file" name="" id=""></p>
+
+    <!-- 버튼 / 말 그대로 클릭할 수 있는 버튼 -->
+    <p>button: <input type="button" value="버튼"></p>
+
+    <!-- 전송하는 기능을 가진 버튼 / 백엔드에서 자주 쓰임 / 하도 자주 쓰여서 기본 제공해줌 -->
+    <p>submit: <input type="submit" value="전송"></p>
+
+    <!-- 그림 / src는 경로, alt는 그림이 오류 등으로 안보일 때 대신 그림을 짧게 설명하는 용도 -->
+    <p>image: <input type="image" src="" alt="beachImg"></p>
+
+    <!-- 사용자는 안보이지만 개발자는 접근하는 용도로 쓰임 -->
+    <p>hidden: <input type="hidden" name="hiddenvalue"></p>
+
+    <!-- 날짜 지정 -->
+    <p>date: <input type="date" name="" id=""></p>
+
+    <!-- 날짜, 시간 지정 / 지역 시간대에 따라 달라짐 / 큰 차이는 없음-->
+    <p>datetime-local: <input type="datetime-local" name="" id="">tetime-local</p>
+
+    <!-- 날짜, 월 지정 -->
+    <p>month: <input type="month" name="" id=""></p>
+
+    <!-- 년도, 주 지정 -->
+    <p>week: <input type="week" name="" id=""></p>
+
+    <!-- 시간 -->
+    <p>time: <input type="time" name="" id=""></p>
+
+    <!-- 범위 설정 / 사운드, 밝기, 창 크기 조절 등등 다양하게 활용됨 -->
+    <p>range: <input type="range" name="" id=""></p>
+
+    <!-- 색상 -->
+    <p>color: <input type="color" name="" id=""></p>
+
+    <!-- 초기화 버튼 / 버튼 안에 담겨 있는 폼이 초기화 됨 -->
+    <p>reset: <input type="reset" value=""></p>
+
+
+    <!-- 
+        name 속성
+        도서를 찾을 때 이름으로 찾거나, 도서코드로 찾듯이
+        입력 요소의 이름을 작성하는 속성이다.
+
+        입력 요소가 form태그에 의해 서버로 전송될 때,
+        name 속성에 적힌 값이 이름으로 지정된다.
+
+        서버에서는 지정된 이름으로 입력 요소를 식별할 수 있다.
+        프로그래밍을 할 때 변수명을 잘 지어야 하듯이
+        name에도 변수의 성격이 잘 들어나는 이름으로 잘 지어야 한다.
+
+        stuName 이라는 변수에 홍길동이 담겨서 전송된다.
+        때문에 홍길동 이라는 값에 접근할 때
+        stuName이라는 변수명으로 접근해야 한다
+
+        name(백앤드용)과 id(CSS용)는 거의 같은 속성이기 때문에 
+        대부분 같은 값으로 지정한다.
+     -->
+
+     <!-- stuName 이라는 변수에 홍길동이 담겨서 전송된다 -->
+    <input type="text" name="stuName" id="">
+    <input type="submit" value="전송">
+
+    <!-- 
+        value 속성
+        value 속성에는 입력 요소의 초깃값을 작성한다.
+
+        대체로 입력 요소는 사용자에게 수동으로 값을 입력 받지만,
+        상황에 따라 초깃값을 설정해야 하는 경우가 있다.
+        이러한 상황에 사용하는게 value 속성이다.
+     -->
+
+</body>
+</html>
