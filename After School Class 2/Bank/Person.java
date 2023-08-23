@@ -3,17 +3,54 @@ package com.sungil.bank;
 public class Person {
 	
 	// 필드
-	String name;	// 이름
-	int age;		// 나이
-	int cashAmount; // 현금보유량
-	BankAccount account; // 계좌정보
-	
-	Person(){}
-	Person(String name, int age, int cashAmount){
-		this.name = name;
-		this.age = age;
-		this.cashAmount = cashAmount;
+	private String name;	// 이름
+	private int age;		// 나이
+	private int cashAmount; // 현금보유량
+	private BankAccount account; // 계좌정보
+
+	// 이름
+	public void setName(String newName) {
+		if(newName != null) {
+			name = newName;
+		} else {
+			System.out.println("성함을 입력해주세요.");
+		}
 	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	// 나이
+	public void setAge(int newAge) {
+		if(newAge > 0) {
+			age = newAge;
+		} else {
+			System.out.println("올바른 나이를 입력하세요.");
+		}
+	}
+	
+	public int getAge() {
+		return age;
+	}
+	
+	// 현금보유량
+	public void setCashAmount(int newCashAmount) {
+		if(newCashAmount > 0) {
+			cashAmount = newCashAmount;
+		} else {
+			System.out.println("올바른 금액을 입력하세요.");
+		}
+	}
+	
+	public int getCashAmount() {return cashAmount;}
+	
+	public void setAccount(BankAccount account) {
+		this.account = account; 
+	}
+	
+	public BankAccount getAccount() {return account;}
+	
 	
 	// 이름: 송금 (transfer)
 	// 기능: 사람에서 사람으로

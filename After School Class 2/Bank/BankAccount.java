@@ -7,26 +7,22 @@ public class BankAccount {
 	// Person 클래스의 필드값을 갖게 됨
 	Person owner; // 소유인 
 	
-	BankAccount(){}
-	BankAccount(int balance){
-		this.balance = balance;
-	}
 	
 	// 이름: 입금 (deposit)
 	// 파라미터: 입금할 금액(정수)
 	// 리턴: 성공여부(논리형)
 	boolean deposit(int amount) {
-		if(amount < 0 || amount > owner.cashAmount) {
+		if(amount < 0 || amount > owner.getCashAmount()) {
 			System.out.println("입금에 실패했습니다.");
-			System.out.printf("잔고: %d원\t현금보유량: %d원\n", balance, owner.cashAmount);
+			System.out.printf("잔고: %d원\t현금보유량: %d원\n", balance, owner.getCashAmount());
 			System.out.println();
 			return false;
 		}
 		balance += amount;
-		owner.cashAmount -= amount;
+		owner.setCashAmount(-amount);
 		
 		System.out.printf("%d원 입금에 성공했습니다.\n", amount);
-		System.out.printf("잔고: %d원\t현금보유량: %d원\n", balance, owner.cashAmount);
+		System.out.printf("잔고: %d원\t현금보유량: %d원\n", balance, owner.getCashAmount());
 		System.out.println();
 		return true;
 	}
@@ -38,15 +34,15 @@ public class BankAccount {
 	boolean withdraw(int amount) {
 		if(amount < 0 || amount > balance) {
 			System.out.println("출금에 실패했습니다.");
-			System.out.printf("잔고: %d원\t현금보유량: %d원\n", balance, owner.cashAmount);
+			System.out.printf("잔고: %d원\t현금보유량: %d원\n", balance, owner.getCashAmount());
 			System.out.println();
 			return false;
 		}
 		balance -= amount;
-		owner.cashAmount += amount;
+		owner.setCashAmount(-amount);
 		
 		System.out.printf("%d원 출금에 성공했습니다.\n", amount);
-		System.out.printf("잔고: %d원\t현금보유량: %d원\n", balance, owner.cashAmount);
+		System.out.printf("잔고: %d원\t현금보유량: %d원\n", balance, owner.getCashAmount());
 		System.out.println();
 		return true;
 	}
@@ -59,15 +55,16 @@ public class BankAccount {
 	boolean transfer(Person to, int amount) {
 		if(amount < 0 || amount > balance) {
 			System.out.println("이체에 실패했습니다.");
-			System.out.printf("잔고: %d원\t현금보유량: %d원\n", balance, owner.cashAmount);
+			System.out.printf("잔고: %d원\t현금보유량: %d원\n", balance, owner.getCashAmount());
 			System.out.println();
 			return false;
 		}
-		balance -= amount;
-		to.account.balance += amount; //받을 사람의 계좌에 있는 잔고에 금액 추가 
 		
-		System.out.printf("%s님에게 %d원 이체하였습니다.\n", to.name, amount);
-		System.out.printf("잔고: %d원\t현금보유량: %d원\n", balance, owner.cashAmount);
+		balance -= amount;
+		to.getAccount().balance += amount; //받을 사람의 계좌에 있는 잔고에 금액 추가 
+		
+		System.out.printf("%s님에게 %d원 이체하였습니다.\n", to.getName(), amount);
+		System.out.printf("잔고: %d원\t현금보유량: %d원\n", balance, owner.getCashAmount());
 		System.out.println();
 		return true;
 	}
