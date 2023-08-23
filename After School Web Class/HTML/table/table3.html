@@ -1,0 +1,76 @@
+<!-- 8/23
+    thead, tfoot, tbody 태그
+    표에서 행을 묶어 그룹화할 때 사용하는 태그들이다.
+    
+    thead는 헤더 영역에 해당하는 행 -> 반드시 th 태그로 열을 생성해야 한다.
+    tfoot은 푸터 영역에 해당하는 행
+    tbody는 본문 영역에 해당하는 행
+
+    주의할 점은 
+    태그를 사용할 때 thead, tfoot, tbody 순으로 작성해야 하고,
+    thead, tfoot 태그는 일반적으로 속성을 나타내고 한 번만 사용할 수 있다.
+
+    이 태그를 사용하는 이유 역시 웹 접근성과 관련있다.
+    산업기사 시험에는 딱히 쓰지 않아도 되지만, 프론트쪽으로 나가려면 필수다.
+ -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>table3</title>
+    <style>
+        table{
+            border: 1px solid black ;
+            border-collapse: collapse;
+        }
+        td,th{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table border="5">
+        <caption>연습 테이블</caption>
+        <!-- thead 영역 -->
+        <thead>
+            <tr>
+                <th>이서영</th>
+                <th>멍청이</th>
+                <th>바보</th>
+                <th>똥새</th>
+            </tr>
+        </thead>
+        
+        <!-- tfoot 영역 -->
+        <tfoot>
+            <tr>
+                <td>총 금액</td>
+                <td colspan="3">∞</td>
+            </tr>
+        </tfoot>
+
+        <!-- tbody 영역 -->
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>김민성</td>
+                <td>1개</td>
+                <td>∞</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>쿼카</td>
+                <td>1개</td>
+                <td rowspan="2">10조</td>
+            </tr>
+                
+            <tr>
+                <td>3</td>
+                <td>멍뭉이</td>
+                <td>1개</td>
+            </tr>
+        </tbody>
+</body>
+</html>

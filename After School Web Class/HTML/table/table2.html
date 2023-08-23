@@ -1,0 +1,65 @@
+<!-- 8/23
+    생각보다 프론트에서 표를 쓰는 경우가 매우 많다
+     
+    rowspan 속성과 colspan 속성
+    
+    열끼리 병합 - colspan
+    행끼리 병합 - rowspan
+    
+    위(또는 왼쪽)가 기준이다.
+    병합하고 싶은 셀의 개수를 적어서 사용하는데,
+    병합한 셀의 개수만큼 다음 행(또는 열)을 비워둬야 한다.
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>table 2</title>
+</head>
+<body>
+    <!-- 사실 요새는 border와 같은 스타일은 CSS에서 하고 html에서 바로 하는걸 권장하지 않음. -->
+    <table border="10">
+        <caption>연습 테이블</caption>
+        <!-- (tr>td*4)*3 ==> 한번에 만들어짐 -->
+        <tr>
+            <th>번호</th>
+            <th>상품명</th>
+            <th>수량</th>
+            <th>가격</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>콜라</td>
+            <td>1개</td>
+            <td>1,500원</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>사이다</td>
+            <td>2개</td>
+            <td rowspan="2">1,000원</td>
+        </tr>
+            
+        <tr>
+            <td>3</td>
+            <td>탄산수</td>
+            <td>3개</td>
+            <!-- <td>1,000원</td> -->
+            <!-- 4행 4열은 3행 4열과 병합했으므로 생성하지 않는다. -->
+        </tr>
+
+        <tr>
+            <td>총 금액</td>
+            <td colspan="3">6,500원</td>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+            <!-- 5행 2~4열은 병합했으므로 나머지 3~4열은 생성하지 않는다. -->
+        </tr>
+
+
+    </table>
+    
+</body>
+</html>

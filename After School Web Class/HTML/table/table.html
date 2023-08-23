@@ -1,0 +1,81 @@
+<!-- 8/23
+    table 태그
+    html에서 표를 생성할 때는 table 태그를 사용한다.
+    표 관련 태그는 모두 table 태그 안에서 사용해야 한다.
+
+    처음 생성하면 아무것도 안보이지만 생성된거다.
+    스타일을 정해줘야 뭐가 보인다.
+
+
+    1. caption 태그
+    표 제목을 지정하는 태그이다.
+
+    html에서 표를 생성할 때 웹 접근성을 향상하는 방법의 하나이다.
+    p태그로 쓰면 안되냐 하지만 p태그로 쓰면 웹 접근성에 위반된다.
+
+    사람들이 착각을 많이 하는게 caption 태그는 table 태그 밖이 아니라 안에 써야한다.
+
+
+    2. tr(table row) 태그
+    표에서 행을 생성하는 태그이다.
+
+    tr태그는 하나의 행을 생성하므로, 여러 행을 만들고 싶으면
+    tr 태그를 여러 번 사용해야 한다.
+
+
+    3. th, td 태그
+    th태그는 표에서 제목을 나타내는 열을 생성할 때 사용하는 태그이고,
+    th태그는 글씨를 가운데 정렬에 굵게 해준다.
+
+    td태그는 표에서 일반적인 데이터를 나타내는 열을 생성할 때 사용하는 태그이다.
+    td태그는 왼쪽 정렬에 일반으로 해준다.
+
+ -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>table</title>
+</head>
+<body>
+    <!-- caption 태그의 잘못된 예시 -->
+    <caption>표 제목</caption>
+    <table></table>
+
+    <!-- caption 태그의 옳은 예시 -->
+    <table>
+        <caption>표 제목</caption>
+
+    </table>
+
+    <!-- 행과 열이 지정되지 않은 표 -->
+    <caption>행과 열이 지정되지 않은 표</caption>
+    <table border="10"></table>
+
+    <hr>
+
+    <table border="10">
+        <tr>
+            <th>제목</th>
+            <td>내용</td>
+        </tr>
+    </table>
+    
+    <hr>
+    
+    <table border="10">
+        <tr>
+            <th>학년</th>
+            <th>반</th>
+            <th>번호</th>
+            <th>이름</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>11</td>
+            <td>2</td>
+            <td>장발장</td>
+        </tr>
+    </table>
+</body>
+</html>
