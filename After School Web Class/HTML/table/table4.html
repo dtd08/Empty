@@ -1,0 +1,80 @@
+<!-- 8/24
+    col과 colgroup 태그
+    표에서 열을 그룹화 할 때 사용한다.
+
+    col 태그는 하나의 열을 그룹화하고,
+    colgroup 태그는 span 속성과 함께 2개 이상의 열을 그룹화한다.
+
+    테이블 중에서 캡션 태그 다음, 가장 위쪽에 쓰임
+-->
+
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>table 4</title>
+     <style>
+         table{
+             border: 1px solid black ;
+             /* 표의 테두리와 셀의 테두리 사이 간격 */
+             border-collapse: collapse;
+         }
+         td,th{
+             padding: 10px;
+         }
+     </style>
+ </head>
+ <body>
+     <table border="5">
+         <caption>연습 테이블</caption>
+
+         <!-- 첫 번째 열 80px -->
+         <col style="width: 80px;">
+         <!-- 두, 세 번째 열 -->
+         <colgroup span="2" style="width: 150px;"></colgroup>
+        <!-- 네 번째 열 -->
+        <col style="width: 100px;">
+
+
+         <!-- thead 영역 -->
+         <thead>
+             <tr>
+                <th>이서영</th>
+                <th>멍청이</th>
+                <th>바보</th>
+                <th>똥새</th>
+             </tr>
+         </thead>
+         
+         <!-- tfoot 영역 -->
+         <tfoot>
+             <tr>
+                <td>총 금액</td>
+                <td colspan="3">∞</td>
+             </tr>
+         </tfoot>
+ 
+         <!-- tbody 영역 -->
+         <tbody>
+             <tr>
+                <td>1</td>
+                <td>김민성</td>
+                <td>1개</td>
+                <td>∞</td>
+             </tr>
+ 
+             <tr>
+                <td>2</td>
+                <td>쿼카</td>
+                <td>1개</td>
+                <td rowspan="2">∞</td>
+             </tr>
+                 
+             <tr>
+                <td>3</td>
+                <td>멍뭉이</td>
+                <td>1개</td>
+             </tr>
+         </tbody>
+ </body>
+ </html>
