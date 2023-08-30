@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML17</title>
+</head>
+<body>
+    <h1>input 태그</h1>
+    <!-- form의 action은 받은 데이터를 어디로 보내줄지 정하는 곳 -->
+    <!-- method는 데이터를 받는 방식. get과 post가 있다 -->
+    <form action="test.jsp" method="post">
+        <fieldset>
+            <legend>회원가입</legend>
+            <p>아이디 : <input type="text" size="15px" maxlength="20"></p>
+            <!-- 만약 제한이 4글자 이상인데 2글자를 쓴다면 쓸 땐 문제가 되지 않지만 전송할 때 문제가 생긴다 -->
+            <!-- 그래서 보통 자바스크립트로 오류메세지를 띄워준다 -->
+            <p>비밀번호 : <input type="password" size="18px" maxlength="12" minlength="4"></p>
+            <p>메일 수신 여부 : 
+                <!-- 라디오의 이름이 같아야지 둘 중 하나만 선택하게 됨 -->
+                <input type="radio" name="receive" value="Y" checked>예
+                <input type="radio" name="receive" value="N">아니오
+            </p>
+            <p>관심 분야 : 
+                <!-- 체크박스에 몇 개가 체크됐는지 확인하고 안내 메세지를 띄우는거는 자바스크립트 역할 -->
+                <input type="checkbox" value="HTML" name="chk1">HTML
+                <input type="checkbox" value="CSS" name="chk2">CSS
+                <input type="checkbox" value="JS" name="chk2">JavaScript
+            </p>
+            <p>
+                <input type="submit" value="전송">
+                <input type="reset" value="취소">
+                <input type="button" value="확인">
+                <input type="image" src="../IMAGES/google_logo.png" alt="구글로고">
+            </p>
+            <p>파일올리기 : <input type="file"></p>
+        </fieldset>
+    </form>
+</body>
+</html>
+<!-- 8/30 -->
