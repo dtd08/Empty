@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS 부분 -->
+    <!-- HTML 안에서 스타일을 적용하는 인라인 방식 -->
+    <style>
+        /* 태그 선택 */
+        p {
+            /* color - 폰트색 */
+            color: blue;
+        }
+
+        /* 아이디 선택 - 앞에 #을 쓰고 아이디를 입력 */
+        /* tea라는 id값을 갖고 있는 태그를 선택함 */
+        #tea {
+            /* background-color - 배경색 */
+            background-color: green;
+        }
+
+        /* 클래스 선택자 - 앞에 .을 쓰고 클래스를 입력 */
+        .house {
+            background-color: orange;
+        }
+
+        /* 자손 선택자 - 띄어쓰기를 한 경우에는 모든 자손이 선택됨 */
+        /* ul 밑에 있는 자손들을 모두 선택 */
+        ul li{
+            color: skyblue;
+        }
+
+        /* 자식 선택자 - > 기호를 사용한 경우 바로 아래 자식이 선택됨 */
+        /* ul 밑에 가장 먼저 나오는 li를 선택 */
+        ul > li {
+            color:limegreen;
+        }
+
+        /* ul 태그의 old 클래스의 바로 밑에 태그 선택 */
+        ul.old > li {
+            color: brown;
+        }
+
+        /* 전체 선택자 */
+        * {
+            /* font-family - 글꼴 */
+            font-family: 궁서;
+        }
+        ul > li> p {
+            color: coral;
+            font-weight: bold;
+        }
+
+        /* 인접 형제 선택자(결합자) */
+        /* 첫번째 요소의 바로 뒤에 위치하면서 같은 부모를 공유하는 두 번째 요소를 선택 */
+        h1+p {
+            background-color: pink;
+        }
+
+        h1+p+p {
+            background-color: aqua;
+        }
+
+        /* p태그 중에서 클래스를 갖고 있는 애들 전부 선택*/
+        p[class] {
+            /* 글씨 크기 */
+            font-size: 50px;
+        }
+
+        /* 다중 선택 - ,로 구분 */
+        h1, h2, h3 {
+            /* 선과 관련된 속성 */
+            /* border 굵기 실선/점선 색상 */
+            border: 1px solid red;
+        }
+    </style>
+
+</head>
+<!-- HTML 부분 -->
+<body>
+    <p>머리가 좋아지는 음식</p>
+    <!-- id 선택자는 전체 웹 페이지에서 딱 한 번만 쓰임-->
+    <!-- 중복되는 id값을 한번만 쓸 수 있다는 말 -->
+    <!-- 만약 중복되면 오류가 난 곳부터 실행되지 않음 -->
+    <!-- 보통 하나뿐인 태그(주로 시맨틱 태그)와 엮어 씀 -->
+    <p id="tea">건강에 좋은 차</p>
+    <!-- class 선택자는 웹 페이지에서 여러번 사용할 수 있음 -->
+    <!-- 여러 개를 한번에 조정할 때 사용함 -->
+    <p class="house">잠이 잘 오는 집</p>
+    <p class="house">건강에 좋은 차 2</p>
+
+    <h2>입고 쓰고 신고 끼고</h2>
+    <ul class="old">
+        <li>옷</li>
+            <ul>
+                <li>속옷</li>
+                <li>잠옷</li>
+                <li>외출복</li>
+            </ul>
+        <li>신발</li>
+        <li>안경</li>
+        <li>장갑</li>
+    </ul>
+
+    <h2>여행</h2>
+    <ul>
+        <!-- li: skyblue ==> p: blue-->
+        <li><p>8월의 추천 여행지</p></li>
+        <li>9월의 추천 여행지</li>
+        <li>10월의 추천 여행지</li>
+    </ul>
+
+    <h1>엑스포 안내</h1>
+    <p>책자를 배부하고 있습니다</p>
+    <p>안내데스크를 이용해주시길 바랍니다</p>
+
+    <h3>3학년 소프트웨어개발과</h3>
+    <p>13반</p>
+    <p>14반</p>
+    <p class="doje">15반</p>
+
+</body>
+</html>
+<!-- 8/31 -->
